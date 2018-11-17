@@ -1,0 +1,97 @@
+
+/* Header */
+.title {
+    font-family: Snell Roundhand;
+    font-weight: normal;
+    font-size: 60px;
+    text-align: center;
+}
+
+/* Article */
+.article {
+    border: 1px solid black;
+    padding: 0 10px;
+}
+
+.article-title {
+    font-style: italic;
+    text-align: center;
+}
+
+.article-img {
+    width: 100%;
+}
+
+/* General layout */
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+.row {
+    display: flex;
+    align-items: stretch;
+}
+
+.section-link {
+    font-size: 30px;
+    font-weight: 200;
+    text-decoration: none;
+    color: #666;
+    padding-left: 50px;
+}
+.other-section {
+    display: flex;
+  
+}
+.site-section {
+    display: flex;
+    align-items: center;
+    flex: 1;
+}
+
+.row-politic {
+    background-color: #ffeaa7;
+}
+
+.row-tech {
+    background-color: #81ecec;
+}
+
+.row-local {
+    background-color: #55efc4;
+}
+
+.row-opinoin {
+    background-color: #74b9ff;
+}
+
+.row-sport {
+    background-color: #a29bfe;
+}
+
+.height-half {
+    height: 100%;
+}
+
+.half {
+    width: 50%;
+}
+
+.quarter {
+    width: 25%;
+}
+
+.three-quarter {
+    width: 75%;
+}
+
+/* Global setting */
+* {
+    box-sizing: border-box;
+}
+
