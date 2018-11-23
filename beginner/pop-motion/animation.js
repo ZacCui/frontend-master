@@ -1,16 +1,16 @@
 const popmotion = require('popmotion')
 
-const { styler, spring, listen, pointer, value } = popmotion;
+const { styler, spring, listen, pointer, value } = popmotion
 
-const ball = document.querySelector('.box');
-const divStyler = styler(ball);
-const ballXY = value({ x: 0, y: 0 }, divStyler.set);
+const ball = document.querySelector('.box')
+const divStyler = styler(ball)
+const ballXY = value({ x: 0, y: 0 }, divStyler.set)
 
 listen(ball, 'mousedown touchstart')
   .start((e) => {
-    e.preventDefault();
-    pointer(ballXY.get()).start(ballXY);
-  });
+    e.preventDefault()
+    pointer(ballXY.get()).start(ballXY)
+  })
 
 listen(document, 'mouseup touchend')
   .start(() => {
@@ -18,8 +18,8 @@ listen(document, 'mouseup touchend')
       from: ballXY.get(),
       velocity: ballXY.getVelocity(),
       to: { x: 0, y: 0 },
-      stiffness: 200,
+      stiffness: 200
       // mass: 1,
       // damping: 10
-    }).start(ballXY);
-  });
+    }).start(ballXY)
+  })
