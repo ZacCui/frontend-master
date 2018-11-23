@@ -1,8 +1,8 @@
-var currentScreen = document.querySelector('.calcultor-number')
-var currentNum = ''
-var stack = []
-var lastInputType = ''
+const currentScreen = document.querySelector('.calcultor-number')
 const keys = document.querySelectorAll('.key')
+var currentNum = ''
+var stack = [] 
+var lastInputType = ''
 
 keys.forEach(function(key){
     key.addEventListener('click', function(event){
@@ -22,7 +22,11 @@ keys.forEach(function(key){
                 lastInputType = 'operator'
             } else if (input === '=' && lastInputType === 'number'){
                 stack.push(currentNum)
-                currentNum = eval(stack.join(' '))
+                try {
+                    currentNum = eval(stack.join(' '))
+                } catch (e) {
+                    currentNum = ''
+                }
                 stack = []
             } else if (input === '←') {
                 if (currentNum.length > 1){
