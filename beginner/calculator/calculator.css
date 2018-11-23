@@ -1,6 +1,7 @@
 .calculator {
-    width: 40%;
+    width: 20%;
     height: 80%;
+    margin: 0 auto;
 }
 
 .calculator-screen {
